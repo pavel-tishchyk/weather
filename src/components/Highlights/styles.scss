@@ -1,0 +1,243 @@
+.highlights {
+  min-width: 300px;
+  background-color: #f6f6f8;
+  padding: 0px 65px 65px;
+
+  .title {
+    font-weight: 600;
+    font-size: 27px;
+    margin-bottom: 40px;
+  };
+
+  .highlights-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+
+    .card {
+      padding: 10%;
+
+      .card-title {
+        font-weight: 500;
+        font-size: 24px;
+        color: #b0b0b0;
+        margin-bottom: 30px;
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-grow: 1;
+      }
+    }
+    .wind-card {
+      .wind-speed {
+        font-size: 60px;
+        font-weight: 300;
+
+        span {
+          font-size: 30px;
+        }
+      }
+      .wind-direction {
+        display: flex;
+        align-items: flex-end;
+
+        img {
+          width: 15%;
+          border: 1px solid #f3f3f4;
+          border-radius: 50%;
+          padding: 3%;
+        }
+
+        p {
+          margin-left: 10px;
+          font-size: 24px;
+        }
+      }
+    }
+
+    .sun-card{
+      .sunrise {
+        .sunrise-icon {
+          &::before {
+            content: url(../../../public/icons/arrow_up_icon.svg);
+            top: 55%;
+          }
+        }
+      }
+      .sunset {
+        .sunset-icon {
+          &::before {
+            content: url(../../../public/icons/arrow_down_icon.svg);
+            top: 60%;
+          }
+        }
+      }
+
+      .sunrise,
+      .sunset {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .sunrise-icon,
+        .sunset-icon {
+          position: relative;
+          width: 25%;
+
+          &::before {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        time {
+          margin-left: 10px;
+          font-size: 24px;
+        }
+      }
+    }
+
+    .humidity-card {
+      .card-body {
+        flex-direction: row;
+
+        .humidity-content {
+          flex-grow: 3;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .humidity-percents {
+            font-size: 60px;
+            font-weight: 300;
+
+            span {
+              font-size: 30px;
+              vertical-align: text-top;
+            }
+          }
+
+          .humidity-status {
+            font-weight: 400;
+            font-size: 18px;
+          }
+        }
+        .humidity-slider {
+          flex-grow: 2;
+          position: relative;
+          height: 100%;
+        }
+      }
+    }
+
+    .precipitation-card {
+      .precipitation-rate {
+        font-size: 60px;
+        font-weight: 300;
+
+        span {
+          font-size: 30px;
+        }
+      }
+
+      .weather-condition {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 18px;
+
+        img {
+          width: 15%;
+        }
+      }
+    }
+
+    .cloud-card {
+      .card-body {
+        .cloud-content {
+          .cloud-percents {
+            font-size: 60px;
+            font-weight: 300;
+
+            span {
+              font-size: 30px;
+              vertical-align: text-top;
+            }
+          }
+        }
+
+        .cloud-slider {
+          width: 100%;
+          .slider {
+            width: 100%;
+
+            input{
+              width: 100%;
+            }
+          }
+
+          .range-labels {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            li {
+              position: absolute;
+              text-align: center;
+              color: #b2b2b2;
+              font-size: 14px;
+              cursor: pointer;
+
+              &::before {
+                position: absolute;
+                top: -190%;
+                right: 0;
+                left: 0;
+                content: "";
+                margin: 0 auto;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: #f3f3f4;
+              }
+
+              &.selected {
+                color: black;
+
+                &::before {
+                  background: #4050d2;
+                }
+              }
+            }
+
+            :nth-child(1) {
+              left: 0;
+              margin-left: 2px;
+            }
+
+            :nth-child(2) {
+              left: 29%;
+            }
+
+            :nth-child(3) {
+              right: 29%;
+            }
+
+            :nth-child(4) {
+              right: 0;
+              margin-right: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+};

@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  box-sizing: border-box;
+  background-color: #f6f6f8;
+
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+};
+
+

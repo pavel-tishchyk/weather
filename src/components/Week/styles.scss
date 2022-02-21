@@ -1,0 +1,36 @@
+.week {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 300px;
+  background-color: #f6f6f8;
+  padding: 80px 60px 90px;
+
+    .card {
+    align-items: center;
+    margin: 0px 5px;
+    width: 100%;
+
+    .card-title {
+      text-align: center;
+      font-weight: 400;
+    }
+
+    .card-image {
+      width: 90%;
+    }
+
+    .card-body {
+      display: flex;
+      justify-content: center;
+
+      .card-text {
+        padding: 0px 3px;
+      }
+
+      .card-text:last-child {
+        color: #b0b0b0;
+      }
+    }
+  }
+};

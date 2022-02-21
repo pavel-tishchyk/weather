@@ -1,0 +1,68 @@
+.today {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-width: 300px;
+  padding-bottom: 65px;
+  background-color: white;
+
+  .weather-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 65px;
+
+    .temperature {
+      font-size: 110px;
+      font-weight: 200;
+    };
+
+    .date {
+      font-size: 26px;
+      font-weight: 400;
+      padding-bottom: 40px;
+      width: 100%;
+      border-bottom: 1px solid #B8B8B8;
+
+      .time {
+        color: #B8B8B8;
+      }
+    };
+
+    .weather-location {
+      font-size: 26px;
+      font-weight: 400;
+      padding-top: 40px;
+
+      img {
+        width: 10%;
+      }
+    };
+
+    .map {
+      position: relative;
+      overflow:hidden;
+      height: 150px;
+      border-radius: 20px;
+
+      .map-image, .map-text {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+      }
+
+      .map-image {
+
+      }
+
+      .map-text {
+        width: 100%;
+        font-weight: 500;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+      }
+    }
+  };
+};

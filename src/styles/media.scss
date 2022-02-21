@@ -1,0 +1,216 @@
+// X-Small devices (portrait phones, less than 576px)
+@include xs {
+  .App {
+    .header {
+      .search {
+        width: 100%;
+        padding: 20px;
+        margin: 0px 10px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+
+      .navigation {
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 20px;
+        background-color: white;
+      }
+    }
+
+    .weather {
+      .today {
+        width: 100%;
+        margin: 0px 10px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        .weather-information {
+          padding: 0 20px;
+        }
+      }
+
+      .container {
+        width: 100%;
+
+        .week {
+          padding: 20px 0px;
+          flex-wrap: wrap;
+
+          .card {
+            margin: 10px;
+          }
+        }
+
+        .highlights {
+          padding: 20px 10px;
+
+          .highlights-cards {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@include sm {
+  .App {
+    .header {
+      .search {
+        width: 100%;
+        padding: 20px;
+        margin: 0px 10px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+
+      .navigation {
+        width: 100%;
+        padding: 20px;
+      }
+    }
+
+    .weather {
+      .today {
+        flex-direction: row;
+        width: 100%;
+        margin: 0px 10px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        .weather-image {
+          flex-grow: 4;
+        }
+
+        .weather-information {
+          flex-grow: 1;
+          padding: 0 20px 0px 0px;
+
+          .map {
+            display: none;
+          }
+        }
+      }
+
+      .container {
+        width: 100%;
+
+        .week {
+          padding: 80px 5px 90px;
+        }
+
+        .highlights {
+          padding: 0px 10px 20px;
+
+          .highlights-cards {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@include md {
+  .App {
+    .header {
+      .search {
+        width: 100%;
+        padding: 20px;
+        margin: 0px 50px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+      }
+
+      .navigation {
+        width: 100%;
+        margin: 20px 50px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 20px;
+      }
+    }
+
+    .weather {
+      .today {
+        flex-direction: row;
+        width: 100%;
+        margin: 0px 50px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        .weather-image {
+          flex-grow: 4;
+        }
+
+        .weather-information {
+          padding: 0px 30px 0px 0px;
+          flex-grow: 1;
+        }
+      }
+
+      .container {
+        width: 100%;
+
+        .week {
+          padding: 80px 45px 90px;
+        }
+
+        .highlights {
+          padding: 0px 50px 65px;
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@include lg {
+  .App {
+    .header {
+      .search {
+        width: 35%;
+        padding: 55px 50px 0px;
+      }
+
+      .navigation {
+        width: 65%;
+        padding: 55px 40px 0px;
+      }
+    }
+
+    .weather {
+      .today {
+        width: 35%;
+
+        .weather-information {
+          padding: 0 50px;
+        }
+      }
+
+      .container {
+        width: 65%;
+
+        .week {
+          padding: 80px 45px 90px;
+        }
+
+        .highlights {
+          padding: 0px 50px 65px;
+
+          .highlights-cards {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+          }
+        }
+      }
+    }
+  }
+}

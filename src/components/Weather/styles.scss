@@ -1,0 +1,10 @@
+.weather {
+  display: flex;
+  flex-wrap: wrap;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+};

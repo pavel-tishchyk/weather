@@ -10,7 +10,7 @@ function Search({searchData, weatherData, isLoading, getSearchData, getLocationD
 
   const handleChange = (name) => {
     setName(name);
-    if(name.trim().length != 0) getSearchData(name);
+    if(name.trim().length !== 0) getSearchData(name);
   }
 
   const handleSubmit = (city) => {

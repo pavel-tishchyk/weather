@@ -28,8 +28,8 @@ function* fetchWeather({payload}) {
     const {latitude, longitude, timezone, temperatureUnit} = payload;
 
     const weatherData = yield call(requests.getWeatherData, latitude, longitude, timezone, temperatureUnit);
-    // const uv = yield call(requests.getUvIndex, payload.latitude, payload.longitude);
-    yield put({type: WEATHER_DATA_SUCCESS, payload: {...weatherData, uv: 5}});
+    const uv = yield call(requests.getUvIndex, payload.latitude, payload.longitude);
+    yield put({type: WEATHER_DATA_SUCCESS, payload: {...weatherData, uv}});
   } catch (e) {
     yield put({type: WEATHER_DATA_ERROR, error: e.message});
   }

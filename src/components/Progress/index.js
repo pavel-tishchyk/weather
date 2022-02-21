@@ -12,7 +12,7 @@ function Progress({value}) {
       duration: 500,
       iterations: 1
     })
-  }, [])
+  }, [deg])
 
   return (
     <div className="progress">
